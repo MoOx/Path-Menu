@@ -1,0 +1,138 @@
+/**
+ * Normalize.css
+ * Opposite approche from CSS reset
+ * 
+ * Based on normalize.css commit 9576d48fc234c5224b1fc4dccba2f5965243843d
+ *
+ * @link http://github.com/necolas/normalize.css
+ */
+/* normalize.css 2011-07-12T10:51 UTC · http://github.com/necolas/normalize.css */
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+/* =============================================================================
+   Base
+   ========================================================================== */
+/* =============================================================================
+   Links
+   ========================================================================== */
+/* =============================================================================
+   Typography
+   ========================================================================== */
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/* =============================================================================
+   Figures
+   ========================================================================== */
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Vertical alignement for page
+ * Inspired by http://css-tricks.com/snippets/css/center-div-with-dynamic-height/
+ * 
+ * Usage:
+ * 
+ * SCSS
+ * @include vertical-align-requirement;
+ * .v-align-container { @include vertical-align-container }
+ * .v-align-content-container { @include vertical-align-content-container }
+ * .v-align-content { @include vertical-align-content }
+ * 
+ * HTML
+ * <body>
+ *     <div class="v-align-container">
+ *         <div class="v-align-content-container">
+ *             <div class="v-align-content">
+ *             Your content !
+ *             </div>
+ *         </div> 
+ *     </div>
+ * </body>
+ *
+ * @thanks Chris Coyier @chriscoyier
+ * @autor Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/* line 32, ../../Compass-Recipes/stylesheets/recipes/layout/_vertical-align.scss */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 6, ../sass/s.scss */
+.v-align-container {
+  display: table;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  *position: relative;
+}
+
+/* line 7, ../sass/s.scss */
+.v-align-content-container {
+  display: table-cell;
+  vertical-align: middle;
+  *position: absolute;
+  *top: 50%;
+}
+
+/* line 8, ../sass/s.scss */
+.v-align-content {
+  *position: relative;
+  *top: -50%;
+}
+
+/**
+ * Blueprint grid background pattern
+ *
+ * @link http://lea.verou.me/css3patterns/#blueprint-grid
+ *
+ * @author Lea Verou http://lea.verou.me/ for the original pattern
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx for the sass mixin
+ */
+/* line 13, ../sass/s.scss */
+body {
+  font: 1.4em/2 Palatino, sans-serif;
+  color: #fff;
+  text-shadow: 0 0.05em 0 rgba(0, 0, 0, 0.6);
+  background-color: #2574b0;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 1, color-stop(100%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 0% 50%, 1 50%, color-stop(100%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 50% 0%, 50% 1, color-stop(100%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 0% 50%, 1 50%, color-stop(100%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -webkit-linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -webkit-linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -moz-linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -moz-linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), -moz-linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -o-linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -o-linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), -o-linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
+  background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -ms-linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -ms-linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), -ms-linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
+/* line 23, ../sass/s.scss */
+a {
+  color: #cccccc;
+}
+/* line 18, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:visited {
+  color: #eeeeee;
+}
+/* line 21, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:focus {
+  color: #ffff99;
+}
+/* line 24, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:hover {
+  color: #ffff66;
+}
+/* line 27, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:active {
+  color: #ffff33;
+}

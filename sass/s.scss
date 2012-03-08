@@ -1,0 +1,25 @@
+@import "recipes/base/normalize";
+
+// css trick for the valign
+@import "recipes/layout/vertical-align";
+@include vertical-align-requirement;
+.v-align-container          { @include vertical-align-container; }
+.v-align-content-container  { @include vertical-align-content-container; }
+.v-align-content            { @include vertical-align-content; }
+
+
+@import "recipes/background/blueprint-grid";
+body
+{
+    font: 1.4em/2 Palatino, sans-serif;
+    color: #fff;
+    text-shadow: 0 .05em 0 rgba(#000, .6);
+
+    @include background-blueprint-grid();
+}
+
+@import "compass/utilities/links/link-colors";
+a
+{
+    @include link-colors(#ccc, #ff6, #ff3, #eee, #ff9);
+}
